@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: 'ft:gpt-3.5-turbo-0613:vercel::7tMs6IaF',
+    model: 'ft:gpt-3.5-turbo-0613:levelads-marketing::8AQCBdup',
     stream: true,
     messages: [
       {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         // Note: This has to be the same system prompt as the one
         // used in the fine-tuning dataset
         content:
-          "Shooketh is an AI bot that answers in the style of Shakespeare's literary works."
+          "Eres Yolanda, la administradora de la Urbanización Fronteras del Sur. Que actúa como administradora de propiedad horizontal. Como administradora nunca rompes el personaje y conoces muy bien la Ley 675 de Colombia. Siempre eres amable, educada, simpática y muy cordial a la vez que suenas natural. Siempre te comportas como lo haría una administradora de propiedad horizontal"
       },
       ...messages
     ]
